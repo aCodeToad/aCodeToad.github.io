@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find Nearby Outdoor Activities</title>
+    <title>Find Outdoor Activities</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
-    <h1>Find Nearby Outdoor Activities</h1>
+    <h1>Find Outdoor Activities Near You</h1>
     <nav>
         <ul>
             <li><a href="grassMain.html">Home</a></li>
@@ -22,9 +22,10 @@
 </header>
 
 <div class="container">
-    <h2>Enter Your Zip Code to Find Outdoor Activities</h2>
-    <input type="text" id="zipCodeInput" placeholder="Enter Zip Code">
+    <label for="zipCodeInput">Enter Your Zip Code:</label>
+    <input type="text" id="zipCodeInput">
     <button onclick="searchActivities()">Search</button>
+
     <div id="activityResults"></div>
 </div>
 
