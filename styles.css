@@ -1,5 +1,8 @@
 /* styles.css */
 
+/* Import favicon using image address (URL) */
+@import url('https://example.com/path/to/favicon.ico');
+
 /* Global styles */
 body {
     font-family: 'Bebas Neue', Arial, sans-serif;
@@ -10,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('https://t4.ftcdn.net/jpg/01/41/94/53/360_F_141945349_ocGfNKfPM3uc1A2LrNtodZq7KV9sWzNB.jpg'); /* Path to your cartoon mountain image */
+    background-image: url('https://t4.ftcdn.net/jpg/01/41/94/53/360_F_141945349_ocGfNKfPM3uc1A2LrNtodZq7KV9sWzNB.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -19,24 +22,24 @@ body {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    flex: 1; /* Grow to fill remaining space */
-    text-align: center; /* Center align text */
+    flex: 1;
+    text-align: center;
 }
 
 .container h2 {
-    font-size: 36px; /* Increase font size */
+    font-size: 36px;
 }
 
 .container p {
-    font-size: 20px; /* Increase font size */
-    margin-bottom: 20px; /* Add space below the paragraph */
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
 /* Header styles */
 header {
-    background-color: #57bb8a; /* Green color */
+    background-color: #57bb8a;
     color: #ffffff;
-    padding: 20px 10px; /* Added units for padding */
+    padding: 20px 10px;
     text-align: center;
 }
 
@@ -58,7 +61,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff; /* Changed color to white */
+    color: #fff;
     font-weight: bold;
     font-size: 18px;
 }
@@ -69,18 +72,9 @@ nav ul li a:hover {
 
 /* Footer styles */
 footer {
-    background-color: #57bb8a; /* Green color */
+    background-color: #57bb8a;
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    margin-top: auto; /* Push footer to the bottom */
-}
-
-/* Add specific styles to the stand-out list item */
-.container ul li.stand-out {
-    font-size: 24px; /* Larger font size */
-    font-weight: bold; /* Bold font weight */
-    color: #3d7fc2c3; /* Custom color (orange) */
-    margin-bottom: 10px; /* Add space below the emphasized line */
-    list-style: none; /* Remove bullet points */
+    margin-top: auto;
 }
