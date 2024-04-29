@@ -78,3 +78,36 @@ footer {
     text-align: center;
     margin-top: auto;
 }
+/* Add CSS styles for the input field and button */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #57bb8a; /* Green color */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #57bb8a; /* Green color */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#activityResults {
+    margin-top: 20px;
+    font-size: 18px;
+}
