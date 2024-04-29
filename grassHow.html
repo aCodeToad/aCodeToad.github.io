@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reasons to Go Outside</title>
+    <title>How to Go Outside!</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom styles for the step container */
+        .step-container {
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px solid #57bb8a;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+        }
+        .step {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
 
@@ -15,25 +29,53 @@
             <li><a href="grassMain.html">Home</a></li>
             <li><a href="grassWhy.html">Why?</a></li>
             <li><a href="grassWhere.html">Where?</a></li>
-            <li><a href="grassHow.html">How!</a></li> 
+            <li><a href="grassHow.html">How!</a></li>
             <li><a href="grassContact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
 
 <div class="container">
-    <h2>First, stand up from the couch, shake off those Dorito crumbs, and go to the door. </h2>
-    <h3>Open the door, squint your eyes to the light from the sun, and walk out.</h3>
+    <h2>First, stand up from the couch, shake off those Dorito crumbs, and go to the door.</h2>
+    <h3>Open the door, squint your eyes to the blinding light from the sun, and step outside.</h3>
     <h4>Once you finally make it out of the basement, breathe in that fresh air. You'll instantly forget the stale smell of cottage cheese and body odor.</h4>
-    <ul>
-
-    </ul>
+    
+    <!-- Step container -->
+    <div class="step-container" id="stepsContainer">
+        <!-- Steps will be dynamically added here -->
+    </div>
 </div>
 
 <footer>
     <p>&copy; 2024 TouchGrass.com</p>
 </footer>
 
+<!-- JavaScript to populate the steps dynamically -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const steps = [
+        "Put on your favorite mismatched socks and flip-flops combo.",
+        "Embrace the feeling of grass under your feet. Pretend you're auditioning for a nature-themed dance show.",
+        "Attempt to identify at least three bird calls. If you can't, make up your own and impress your imaginary audience.",
+        "Practice the ancient art of cloud-gazing. Try not to mistake airplanes for flying saucers.",
+        "Engage in a deep philosophical conversation with a squirrel. Don't be discouraged if it doesn't respond.",
+        "Explore your neighborhood like an intrepid explorer, armed only with a phone for navigation.",
+        "Challenge yourself to climb a hill or conquer a set of stairs. Pretend you're training for a Mount Everest expedition.",
+        "Stop and smell the flowers, literally. Bonus points if you can identify them without sneezing.",
+        "Find a comfortable spot, lie down, and stare at the sky. Contemplate the mysteries of the universe or just take a nap."
+    ];
+
+    const stepsContainer = document.getElementById('stepsContainer');
+
+    // Loop through steps array and create step elements
+    steps.forEach((stepText, index) => {
+        const stepElement = document.createElement('div');
+        stepElement.classList.add('step');
+        stepElement.textContent = `${index + 1}. ${stepText}`;
+        stepsContainer.appendChild(stepElement);
+    });
+});
+</script>
+
 </body>
 </html>
-
