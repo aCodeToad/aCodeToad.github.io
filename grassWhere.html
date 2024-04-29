@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find Outdoor Activities</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Outdoor Activities Map</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your custom CSS file -->
+
+    <style>
+        /* Custom styles for the map container */
+        #map-container {
+            width: 80%; /* Set the width of the map container */
+            height: 400px; /* Set the height of the map container */
+            margin: 20px auto; /* Center the map container with margin */
+        }
+    </style>
 </head>
 <body>
 
@@ -22,17 +31,35 @@
 </header>
 
 <div class="container">
-    <label for="zipCodeInput">Enter Your Zip Code:</label>
-    <input type="text" id="zipCodeInput">
-    <button onclick="searchActivities()">Search</button>
-
-    <div id="activityResults"></div>
+    <!-- Map container with custom size -->
+    <div id="map-container"></div>
 </div>
 
 <footer>
     <p>&copy; 2024 TouchGrass.com</p>
 </footer>
 
-<script src="script.js"></script>
+<!-- Google Maps API Script -->
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmFXfBaMLjW0Du7TfK4a4McCcUY0Fvi00&callback=initMap&libraries=maps,marker&v=beta"></script>
+
+<script>
+// Initialize and display the map
+function initMap() {
+    const mapContainer = document.getElementById('map-container');
+    const options = {
+        center: { lat: 39.68466567993164, lng: -77.35356903076172 }, // Example coordinates
+        zoom: 12 // Zoom level
+    };
+    const map = new google.maps.Map(mapContainer, options);
+
+    // Add a marker at a specific location
+    const marker = new google.maps.Marker({
+        position: { lat: 39.68466567993164, lng: -77.35356903076172 },
+        map: map,
+        title: 'My Location'
+    });
+}
+</script>
+
 </body>
 </html>
